@@ -1,25 +1,6 @@
-/*!
-Theme Name: eva
-Theme URI: http://underscores.me/
-Author: Guilherme Vieira
-Author URI: https://guilhermevieira.info
-Description: Description
-Version: 1.0.0
-Tested up to: 5.4
-Requires PHP: 5.6
-License: GNU General Public License v2 or later
-License URI: LICENSE
-Text Domain: eva
-Tags: custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned.
-
-eva is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
-*/
 /* Andy Bell's modern CSS reset 
 ---------------------------------------------*/
+
 /* Box sizing rules */
 *,
 *::before,
@@ -42,8 +23,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role=list],
-ol[role=list] {
+ul[role='list'],
+ol[role='list'] {
   list-style: none;
 }
 
@@ -82,17 +63,15 @@ select {
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
-    scroll-behavior: auto;
+   scroll-behavior: auto;
   }
-
+  
   *,
-*::before,
-*::after {
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
 }
-
-/*# sourceMappingURL=style.css.map */

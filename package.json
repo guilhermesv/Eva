@@ -9,10 +9,10 @@
     "Theme"
   ],
   "devDependencies": {
-    "@wordpress/scripts": "^12.1.0",
-    "dir-archiver": "^1.1.1",
-    "node-sass": "^4.14.1",
-    "rtlcss": "^2.5.0"
+    "@wordpress/scripts": "^16.1.4",
+    "dir-archiver": "^1.2.0",
+    "sass": "1.35.1",
+    "rtlcss": "^3.3.0"
   },
   "rtlcssConfig": {
     "options": {
@@ -28,8 +28,7 @@
     "map": false
   },
   "scripts": {
-    "watch": "node-sass sass/ -o ./ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
-    "compile:css": "node-sass sass/ -o ./ && stylelint '*.css' --fix || true && stylelint '*.css' --fix",
+    "watch": "sass --watch sass:../Eva",
     "compile:rtl": "rtlcss style.css style-rtl.css",
     "lint:scss": "wp-scripts lint-style 'sass/**/*.scss'",
     "lint:js": "wp-scripts lint-js 'js/*.js'",
