@@ -1,0 +1,10 @@
+body {
+  font-family: var(--fonte-base);
+}
+
+a,
+a:hover,
+a:visited {
+  color: inherit;
+  text-decoration: underline;
+}

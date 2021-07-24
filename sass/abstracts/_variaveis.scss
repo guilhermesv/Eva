@@ -8,9 +8,16 @@
 
 // Espaçamento
 :root {
+  --espaco-pq: 0.5rem;
   --espaco: 1rem;
   --espaco-md: 2rem;
   --espaco-gd: 6rem;
+}
+
+// Tipografia
+:root {
+  --fonte-base: 'Apfel Grotezk';
+  --fonte-enfase: 'Mazius';
 }
 
 

@@ -39,15 +39,21 @@
 		</nav><!-- #site-navigation -->
 
 		<div class="site-branding">
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="logo" src="eva" alt="Logo eva"></a>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+			<img class="logo" src="<?php echo esc_url( get_template_directory_uri() . '/imagens/eva-logo-temp.jpg') ?>" alt="Logo eva">
+			</a>
 		</div><!-- .site-branding -->
 
-		<div id="widget-header-1" class="widget-area">
-			<?php dynamic_sidebar( 'widget-header-1' ); ?>
-		</div><!-- #widget-header-1 -->
+		<?php if ( is_active_sidebar( 'widget-header-1' ) ): ?>
+			<div id="widget-header-1" class="widget-area">
+				<?php dynamic_sidebar( 'widget-header-1' ); ?>
+			</div><!-- #widget-header-1 -->
+		<?php endif; ?>
 
-		<div id="widget-header-2" class="widget-area">
-			<?php dynamic_sidebar( 'widget-header-2' ); ?>
-		</div><!-- #widget-header-1 -->
+		<?php if ( is_active_sidebar( 'widget-header-2' ) ): ?>
+			<div id="widget-header-2" class="widget-area">
+				<?php dynamic_sidebar( 'widget-header-2' ); ?>
+			</div><!-- #widget-header-2 -->
+		<?php endif; ?>
 
 	</header><!-- #masthead -->

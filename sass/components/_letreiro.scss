@@ -1,0 +1,22 @@
+.letreiro {
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 100%;
+  --tempo: 4s;
+
+  .letreiro-texto {
+    animation: marquee var(--tempo) linear infinite;
+    display: inline-block;
+    padding-right: 10px;
+  }
+
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to { 
+    transform: translateX(-100%);
+  }
+}

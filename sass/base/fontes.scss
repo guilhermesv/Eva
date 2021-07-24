@@ -7,7 +7,15 @@
 }
 
 @font-face {
-  font-family: 'Sneaky Times';
-  src: url("fonts/Sneaky-Times.woff2") format("woff2"),
-       url("fonts/Sneaky-Times.woff") format("woff");
+  font-family: 'Mazius';
+  src: url("fonts/Mazius-Regular.woff2") format("woff2"),
+       url("fonts/Mazius-Regular.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mazius';
+  src: url("fonts/Mazius-Italic.woff2") format("woff2"),
+       url("fonts/Mazius-Italic.woff") format("woff");
+  font-style: italic;
 }
