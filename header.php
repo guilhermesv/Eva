@@ -39,22 +39,15 @@
 		</nav><!-- #site-navigation -->
 
 		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$eva_description = get_bloginfo( 'description', 'display' );
-			if ( $eva_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $eva_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="logo" src="eva" alt="Logo eva"></a>
 		</div><!-- .site-branding -->
-		
+
+		<div id="widget-header-1" class="widget-area">
+			<?php dynamic_sidebar( 'widget-header-1' ); ?>
+		</div><!-- #widget-header-1 -->
+
+		<div id="widget-header-2" class="widget-area">
+			<?php dynamic_sidebar( 'widget-header-2' ); ?>
+		</div><!-- #widget-header-1 -->
+
 	</header><!-- #masthead -->
