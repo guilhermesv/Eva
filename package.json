@@ -28,7 +28,7 @@
     "map": false
   },
   "scripts": {
-    "watch": "sass --watch sass:../Eva",
+    "watch": "sass --watch sass/style.scss:style.css --style=expanded",
     "compile:rtl": "rtlcss style.css style-rtl.css",
     "lint:scss": "wp-scripts lint-style 'sass/**/*.scss'",
     "lint:js": "wp-scripts lint-js 'js/*.js'",
