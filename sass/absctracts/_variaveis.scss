@@ -1,2 +1,17 @@
-$color__background-screen: #f1f1f1;
-$color__text-screen: #21759b;
+// Cores
+:root {
+  --cor-conteudo-texto: #000;
+  --cor-conteudo-fundo: #fff;
+  --cor-estrutural-texto: #fff;
+  --cor-estrutural-fundo: #000;
+}
+
+// Espaçamento
+:root {
+  --espaco: 1rem;
+  --espaco-md: 2rem;
+  --espaco-gd: 6rem;
+}
+
+
+
