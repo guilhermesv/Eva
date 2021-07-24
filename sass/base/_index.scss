@@ -3,5 +3,7 @@
 @use "reset";
 
 @use "fontes";
-
-@use "tipografia";
+@forward "sumario";
+@forward "reset";
+@forward "fontes";
+@forward "tipografia";
