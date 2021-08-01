@@ -6,7 +6,7 @@
 }
 
 :root {
-  --espaco-pq: 0.5rem;
+  --espaco-pq: 0.2rem;
   --espaco: 1rem;
   --espaco-md: 2rem;
   --espaco-gd: 6rem;
@@ -37,6 +37,11 @@ Use it to make something cool, have fun, and share what you've learned.
 eva is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 */
+/* TEMP */
+body {
+  background-image: url("https://payload.cargocollective.com/1/21/687144/12136900/mapa_a4_3_web_800.jpg");
+}
+
 /* Andy Bell's modern CSS reset 
 ---------------------------------------------*/
 /* Box sizing rules */
@@ -204,10 +209,10 @@ a:visited {
 .site-header {
   background-color: var(--cor-estrutural-fundo);
   color: var(--cor-estrutural-texto);
-  padding: var(--espaco-pq);
+  border-right: 1px solid var(--cor-estrutural-texto);
   display: flex;
   flex-direction: row-reverse;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
   position: fixed;
   width: 100%;
@@ -219,7 +224,7 @@ a:visited {
 }
 @media (min-width: 37.5rem) {
   .site-header .widget-area {
-    display: block;
+    display: flex;
   }
   .site-header .site-header {
     flex-direction: row;
@@ -231,33 +236,50 @@ a:visited {
     flex-direction: row;
   }
 }
-.site-header > * {
-  margin-right: var(--espaco);
-}
-
-.site-header > *:last-child {
-  margin-right: 0;
-}
-
 .main-navigation {
   flex-shrink: 0;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  padding: var(--espaco-pq);
+  align-items: center;
 }
 
 .site-branding {
   flex-shrink: 0;
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-end;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  padding: var(--espaco-pq);
 }
 
 #widget-header-1 {
   overflow-x: hidden;
   flex-shrink: 1;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  padding: var(--espaco-pq) 0;
+  align-items: center;
 }
 
 #widget-header-2 {
   flex-shrink: 0;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  padding: var(--espaco-pq);
+  align-items: center;
 }
 
 .main-navigation {
-  display: block;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  min-width: 50%;
 }
 .main-navigation ul {
   display: none;
@@ -297,7 +319,8 @@ a:visited {
 }
 
 .main-navigation.toggled {
-  text-align: right;
+  text-align: center;
+  padding-bottom: 0.62rem;
 }
 .main-navigation.toggled li {
   margin-right: 0;
@@ -309,6 +332,10 @@ a:visited {
 @media (min-width: 37.5rem) {
   .menu-toggle {
     display: none;
+  }
+
+  .main-navigation {
+    min-width: auto;
   }
 
   .main-navigation ul {

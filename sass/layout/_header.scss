@@ -3,10 +3,10 @@
 .site-header {
   background-color: var(--cor-estrutural-fundo);
   color: var(--cor-estrutural-texto);
-  padding: var(--espaco-pq);
+  border-right: 1px solid var(--cor-estrutural-texto);
   display: flex;
   flex-direction: row-reverse;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
   position: fixed;
   width: 100%;
@@ -19,7 +19,7 @@
 
   @include mixins.responsivo(pequena) {
     .widget-area {
-      display: block;
+      display: flex;
     }
     .site-header {
       flex-direction: row;
@@ -33,28 +33,44 @@
   }
 }
 
-.site-header > * {
-  margin-right: var(--espaco);
-}
-
-.site-header > *:last-child {
-  margin-right: 0;
-}
-
 .main-navigation {
   flex-shrink: 0;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  padding: var(--espaco-pq);
+  align-items: center;
 }
 
 .site-branding {
   flex-shrink: 0;
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-end;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  padding: var(--espaco-pq);
 }
 
 #widget-header-1 {
   overflow-x: hidden;
   flex-shrink: 1;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  padding: var(--espaco-pq) 0;
+  
+  align-items: center;
 }
 
 #widget-header-2 {
   flex-shrink: 0;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  padding: var(--espaco-pq);
+  
+  align-items: center;
 }
 
