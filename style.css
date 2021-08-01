@@ -206,6 +206,7 @@ a:visited {
   color: var(--cor-estrutural-texto);
   padding: var(--espaco-pq);
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
   justify-content: space-between;
   position: fixed;
@@ -220,8 +221,16 @@ a:visited {
   .site-header .widget-area {
     display: block;
   }
+  .site-header .site-header {
+    flex-direction: row;
+  }
 }
 
+@media (min-width: 37.5rem) {
+  .site-header {
+    flex-direction: row;
+  }
+}
 .site-header > * {
   margin-right: var(--espaco);
 }
@@ -271,7 +280,28 @@ a:visited {
 }
 
 /* Menu resumido. */
-.menu-toggle,
+.menu-toggle {
+  border: none;
+  background-color: var(--cor-estrutural-fundo);
+  text-transform: lowercase;
+  text-decoration: underline;
+  color: var(--cor-estrutural-texto);
+  font-family: var(--fonte-enfase);
+  font-style: italic;
+  padding: 0;
+  cursor: pointer;
+}
+
+.menu-toggle {
+  display: inline;
+}
+
+.main-navigation.toggled {
+  text-align: right;
+}
+.main-navigation.toggled li {
+  margin-right: 0;
+}
 .main-navigation.toggled ul {
   display: block;
 }

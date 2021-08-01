@@ -30,10 +30,36 @@
 }
 
 /* Menu resumido. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
+
+.menu-toggle {
+	border: none;
+	background-color: var(--cor-estrutural-fundo);
+	text-transform: lowercase;
+	text-decoration: underline;
+	color: var(--cor-estrutural-texto);
+	font-family: var(--fonte-enfase);
+	font-style: italic;
+	padding: 0;
+	cursor: pointer;
 }
+
+.menu-toggle {
+	display: inline;
+}
+
+.main-navigation.toggled {
+	text-align: right;
+
+	li {
+		margin-right: 0;
+	}
+
+	ul {
+		display: block;
+	}
+}
+
+
 
 
 @include mixins.responsivo(pequena) {

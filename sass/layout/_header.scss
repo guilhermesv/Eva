@@ -5,6 +5,7 @@
   color: var(--cor-estrutural-texto);
   padding: var(--espaco-pq);
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
   justify-content: space-between;
   position: fixed;
@@ -20,8 +21,16 @@
     .widget-area {
       display: block;
     }
+    .site-header {
+      flex-direction: row;
+    }
   }
+}
 
+@include mixins.responsivo(pequena) {
+  .site-header {
+    flex-direction: row;
+  }
 }
 
 .site-header > * {
