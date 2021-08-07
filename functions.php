@@ -195,3 +195,81 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+/**
+ * Post Type Edições
+ */
+
+function edicoes_post_type() {
+ 
+	// Set UI labels for Custom Post Type
+			$labels = array(
+					'name'                => _x( 'Edições', 'Post Type General Name', 'eva' ),
+					'singular_name'       => _x( 'Edição', 'Post Type Singular Name', 'eva' ),
+					'menu_name'           => __( 'Edições', 'eva' ),
+					'all_items'           => __( 'Todas as Edições', 'eva' ),
+					'view_item'           => __( 'Ver Edição', 'eva' ),
+					'add_new_item'        => __( 'Adicionar nova Edição', 'eva' ),
+					'add_new'             => __( 'Adicionar nova', 'eva' ),
+					'edit_item'           => __( 'Editar Edição', 'eva' ),
+					'update_item'         => __( 'Atualizar Edição', 'eva' ),
+					'search_items'        => __( 'Procurar Edição', 'eva' ),
+					'not_found'           => __( 'Não encontrado', 'eva' ),
+					'not_found_in_trash'  => __( 'Não encontrado na lixeira', 'eva' ),
+			);
+			 
+	// Set other options for Custom Post Type
+			 
+			$args = array(
+					'label'               => __( 'edicoes', 'eva' ),
+					'description'         => __( 'Edições.', 'eva' ),
+					'labels'              => $labels,
+					// Features this CPT supports in Post Editor
+					'supports'            => array( 'title', 'editor', 'custom-fields', 'thumbnail', 'excerpt' ),
+					'hierarchical'        => false,
+					'public'              => true,
+					'show_ui'             => true,
+					'show_in_menu'        => true,
+					'show_in_nav_menus'   => true,
+					'show_in_admin_bar'   => true,
+					'menu_position'       => 5,
+					'menu_icon'						=> 'dashicons-heart',
+					'can_export'          => true,
+					'has_archive'         => true,
+					'exclude_from_search' => true,
+					'publicly_queryable'  => true,
+					'capability_type'     => 'post',
+					'show_in_rest' => true,
+	 
+			);
+			 
+			// Registering your Custom Post Type
+			register_post_type( 'edicoes', $args );
+	 
+	}
+	 
+	/* Hook into the 'init' action so that the function
+	* Containing our post type registration is not 
+	* unnecessarily executed. 
+	*/
+add_action( 'init', 'edicoes_post_type', 0 );
+
+function edicoes_taxonomy() {
+	register_taxonomy(
+			'categorias-edicoes',  
+			'edicoes',             // post type name
+			array(
+					'hierarchical' => true,
+					'label' => 'Categorias', // display name
+					'show_admin_column' => true,
+					'query_var' => true,
+					'show_in_rest' => true,
+					'rewrite' => array(
+							'slug' => 'themes',    // This controls the base slug that will display before each term
+							'with_front' => false  // Don't display the category base before
+					)
+			)
+	);
+}
+add_action( 'init', 'edicoes_taxonomy');
+
