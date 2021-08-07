@@ -1,18 +1,20 @@
+@use "sass:math";
+
 @mixin responsivo($breakpoint) {
   @if $breakpoint == "pequena" {
-    @media (min-width: 600 / 16 + rem) {
+    @media (min-width: math.div(600,16) + rem) {
       @content;
     }
   }
 
   @else if $breakpoint == "media" {
-    @media (min-width: 800 / 16 + rem) {
+    @media (min-width: math.div(800,16) + rem) {
       @content;
     }
   }
 
   @else if $breakpoint == "grande" {
-    @media (min-width: 1200 / 16 + re) {
+    @media (min-width: math.div(1200,16) + rem) {
       @content;
     }
   }
