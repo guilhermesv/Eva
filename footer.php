@@ -10,22 +10,13 @@
  */
 
 ?>
-
+	
+	<?php if( get_field('mostrar_rodape') ): ?>
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'eva' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'eva' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'eva' ), 'eva', '<a href="https://guilhermevieira.info">Guilherme Vieira</a>' );
-				?>
-		</div><!-- .site-info -->
+		oi
 	</footer><!-- #colophon -->
+	<?php endif;?>
+
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
