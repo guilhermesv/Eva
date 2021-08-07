@@ -238,9 +238,6 @@ a:visited {
 }
 .main-navigation {
   flex-shrink: 0;
-  border-top: 1px solid;
-  border-bottom: 1px solid;
-  border-left: 1px solid;
   padding: var(--espaco-pq);
   align-items: center;
 }
@@ -250,9 +247,6 @@ a:visited {
   flex-grow: 1;
   display: flex;
   align-items: flex-end;
-  border-top: 1px solid;
-  border-bottom: 1px solid;
-  border-left: 1px solid;
   padding: var(--espaco-pq);
 }
 
@@ -264,18 +258,12 @@ a:visited {
 #widget-header-1 {
   overflow-x: hidden;
   flex-shrink: 1;
-  border-top: 1px solid;
-  border-bottom: 1px solid;
-  border-left: 1px solid;
   padding: var(--espaco-pq) 0;
   align-items: center;
 }
 
 #widget-header-2 {
   flex-shrink: 0;
-  border-top: 1px solid;
-  border-bottom: 1px solid;
-  border-left: 1px solid;
   padding: var(--espaco-pq);
   align-items: center;
 }
