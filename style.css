@@ -204,6 +204,14 @@ a:visited {
   margin-bottom: 1.5em;
 }
 
+.site {
+  padding-bottom: 60px;
+}
+
+.site-main {
+  padding: var(--espaco);
+}
+
 .site-header {
   background-color: var(--cor-estrutural-fundo);
   color: var(--cor-estrutural-texto);
