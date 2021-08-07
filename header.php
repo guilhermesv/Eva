@@ -18,6 +18,29 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
+
+	<!-- CSS customizado -->
+	<style>
+		:root {
+			--cor-conteudo-texto: <?php the_field('cor-conteudo-texto'); ?>;
+			--cor-conteudo-fundo: <?php the_field('cor-conteudo-fundo'); ?>;
+			--cor-estrutural-texto: <?php the_field('cor-estrutural-texto'); ?>;
+			--cor-estrutural-fundo: <?php the_field('cor-estrutural-fundo'); ?>;
+		}
+
+		body {
+
+			<?php if(get_field('conteudo-fundo-imagem')) : 
+				$imagem = get_field('conteudo-fundo-imagem');
+				echo 'background-image: url("' . $imagem . '");';
+			endif;?>
+
+			<?php if(get_field('conteudo-fundo-imagem-capa')) : 
+				$imagem = get_field('conteudo-fundo-imagem-capa');
+				echo 'background-size: cover;';
+			endif;?>
+		}
+	</style>
 </head>
 
 <body <?php body_class(); ?>>
