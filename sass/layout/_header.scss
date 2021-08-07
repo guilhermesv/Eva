@@ -15,6 +15,10 @@
 
   .widget-area {
     display: none;
+
+    .widget {
+      overflow-x: hidden;
+    }
   }
 
   @include mixins.responsivo(pequena) {
@@ -34,34 +38,32 @@
 }
 
 .main-navigation {
-  flex-shrink: 0;
   padding: var(--espaco-pq);
   align-items: center;
 }
 
 .site-branding {
-  flex-shrink: 0;
-  flex-grow: 1;
   display: flex;
   align-items: flex-end;
   padding: var(--espaco-pq);
 }
 
 .marca {
-  max-width: 60px;
+  width: 60px;
   fill: var(--cor-estrutural-texto);
 }
 
 #widget-header-1 {
-  overflow-x: hidden;
-  flex-shrink: 1;
   padding: var(--espaco-pq) 0;
   align-items: center;
+  overflow-x: hidden;
+  flex-shrink: 1;
 }
 
 #widget-header-2 {
-  flex-shrink: 0;
   padding: var(--espaco-pq);
   align-items: center;
+  flex-shrink: 0;
+  flex-grow: 1;
 }
 

@@ -222,6 +222,9 @@ a:visited {
 .site-header .widget-area {
   display: none;
 }
+.site-header .widget-area .widget {
+  overflow-x: hidden;
+}
 @media (min-width: 37.5rem) {
   .site-header .widget-area {
     display: flex;
@@ -237,35 +240,33 @@ a:visited {
   }
 }
 .main-navigation {
-  flex-shrink: 0;
   padding: var(--espaco-pq);
   align-items: center;
 }
 
 .site-branding {
-  flex-shrink: 0;
-  flex-grow: 1;
   display: flex;
   align-items: flex-end;
   padding: var(--espaco-pq);
 }
 
 .marca {
-  max-width: 60px;
+  width: 60px;
   fill: var(--cor-estrutural-texto);
 }
 
 #widget-header-1 {
-  overflow-x: hidden;
-  flex-shrink: 1;
   padding: var(--espaco-pq) 0;
   align-items: center;
+  overflow-x: hidden;
+  flex-shrink: 1;
 }
 
 #widget-header-2 {
-  flex-shrink: 0;
   padding: var(--espaco-pq);
   align-items: center;
+  flex-shrink: 0;
+  flex-grow: 1;
 }
 
 .main-navigation {
@@ -348,11 +349,27 @@ a:visited {
   white-space: nowrap;
   max-width: 100%;
   --tempo: 4s;
+  position: relative;
 }
 .letreiro .letreiro-texto {
   animation: marquee var(--tempo) linear infinite;
   display: inline-block;
   padding-right: 10px;
+}
+.letreiro::after, .letreiro::before {
+  content: " ";
+  position: absolute;
+  display: block;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 4rem;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, var(--cor-estrutural-fundo));
+}
+.letreiro::before {
+  left: 0;
+  background: linear-gradient(90deg, var(--cor-estrutural-fundo) 0%, rgba(0, 0, 0, 0));
+  z-index: 1;
 }
 
 @keyframes marquee {

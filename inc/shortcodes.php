@@ -13,12 +13,12 @@ function eva_letreiro( $atts = array() ) {
     'tempo' => '6'
   ), $atts));
 
-  $html = '<div class="letreiro" style="--tempo:' . $tempo . 's">';
+  $html = '<div class="letreiro-wrapper"><div class="letreiro" style="--tempo:' . $tempo . 's">';
   $html .= '<div class="letreiro-texto">' . $texto . '</div>';
   for ( $i = 0; $i < 5; $i++) {
     $html .= '<div class="letreiro-texto" aria-hidden="true">' . $texto . '</div>';
   }
-  $html .= '</div>';
+  $html .= '</div></div>';
 
   return $html;
 }

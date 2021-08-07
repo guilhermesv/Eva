@@ -3,6 +3,7 @@
   white-space: nowrap;
   max-width: 100%;
   --tempo: 4s;
+  position: relative;
 
   .letreiro-texto {
     animation: marquee var(--tempo) linear infinite;
@@ -10,7 +11,24 @@
     padding-right: 10px;
   }
 
+  &::after, &::before {
+    content: ' ';
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 4rem;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, var(--cor-estrutural-fundo));
+  }
+
+  &::before {
+    left: 0;
+    background: linear-gradient(90deg, var(--cor-estrutural-fundo) 0%, rgba(0, 0, 0, 0));
+    z-index: 1;
+  }
 }
+
 
 @keyframes marquee {
   from {
