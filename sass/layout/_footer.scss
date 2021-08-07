@@ -1,0 +1,24 @@
+@use '../abstracts/mixins';
+
+.site-footer {
+  padding: var(--espaco);
+  background-color: var(--cor-estrutural-fundo);
+  color: var(--cor-estrutural-texto);
+
+  @include mixins.responsivo(pequena) {
+    & {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .widget-area {
+      margin-right: var(--espaco);
+    }
+
+    .widget-area:last-child {
+      margin-right: 0;
+    }
+  }
+
+}
+

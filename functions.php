@@ -135,6 +135,21 @@ function eva_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
+
+	for($i = 1; $i <= 4; $i++) {
+		register_sidebar(
+			array(
+				'name'          => esc_html__( 'Widget Rodapé ' . $i, 'eva' ),
+				'id'            => 'widget-footer-' . $i,
+				'description'   => esc_html__( 'Add widgets here.', 'eva' ),
+				'before_widget' => '<div id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</div>',
+				'before_title'  => '<h2 class="widget-title">',
+				'after_title'   => '</h2>',
+			)
+		);
+	}
+
 }
 add_action( 'widgets_init', 'eva_widgets_init' );
 
