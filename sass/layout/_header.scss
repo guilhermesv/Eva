@@ -51,6 +51,12 @@
   border-bottom: 1px solid;
   border-left: 1px solid;
   padding: var(--espaco-pq);
+  
+}
+
+.marca {
+  max-width: 60px;
+  fill: var(--cor-estrutural-texto);
 }
 
 #widget-header-1 {

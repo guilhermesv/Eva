@@ -256,6 +256,11 @@ a:visited {
   padding: var(--espaco-pq);
 }
 
+.marca {
+  max-width: 60px;
+  fill: var(--cor-estrutural-texto);
+}
+
 #widget-header-1 {
   overflow-x: hidden;
   flex-shrink: 1;
