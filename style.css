@@ -228,7 +228,7 @@ a:visited {
   width: 100%;
   left: 0;
   bottom: 0;
-  height: 60px;
+  min-height: 60px;
 }
 .site-header .widget-area {
   display: none;

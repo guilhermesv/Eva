@@ -7,6 +7,46 @@
  * @package eva
  */
 
+
+if ( ! function_exists( 'eva_resumo' ) ) :
+	/**
+	 *  Retorna o resumo do post quando disponível.
+	 */
+	function eva_resumo() {
+
+		$limit = 20;
+		if ( get_the_excerpt() ) :
+
+			$excerpt = explode(' ', get_the_excerpt(), $limit);
+			if (count($excerpt)>=$limit) {
+				array_pop($excerpt);
+				$excerpt = implode(" ",$excerpt).'...';
+			} else {
+				$excerpt = implode(" ",$excerpt);
+			}
+			$excerpt = preg_replace('`[[^]]*]`','',$excerpt);
+
+			echo $excerpt;
+
+		else:
+			echo "—";
+		endif;
+	}
+endif;
+
+if ( ! function_exists( 'eva_categorias' ) ) :
+	/**
+	 *  Retorna as categorias quando disponível.
+	 */
+	function eva_categorias() {
+		if ( get_the_terms( $post->ID, 'categorias-edicoes' ) ) :
+			the_terms( $post->ID, 'categorias-edicoes', '', ', ' );
+		else:
+			echo "—";
+		endif;
+	}
+endif;
+
 if ( ! function_exists( 'eva_posted_on' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time.
