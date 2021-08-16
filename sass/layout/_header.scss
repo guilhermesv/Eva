@@ -38,7 +38,7 @@
 }
 
 .main-navigation {
-  padding: var(--espaco-pq);
+  padding: var(--espaco-pq) var(--espaco);
   align-items: center;
 }
 
@@ -61,7 +61,7 @@
 }
 
 #widget-header-2 {
-  padding: var(--espaco-pq);
+  padding: var(--espaco-pq) var(--espaco);
   align-items: center;
   flex-shrink: 0;
   flex-grow: 1;
