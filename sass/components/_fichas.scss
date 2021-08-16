@@ -1,0 +1,11 @@
+.ficha {
+  .campo {
+    margin-bottom: var(--espaco);
+  }
+  .campo .campo-rotulo {
+    font-family: var(--fonte-enfase);
+    text-transform: lowercase;
+    font-style: italic;
+    font-size: 1.1rem;
+  }
+}
