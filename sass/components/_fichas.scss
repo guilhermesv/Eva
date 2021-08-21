@@ -1,4 +1,8 @@
+@use "../abstracts/mixins";
+@use "sass:math" as *;
+
 .ficha {
+  margin-bottom: var(--espaco-md);
   .campo {
     margin-bottom: var(--espaco);
   }
@@ -7,5 +11,29 @@
     text-transform: lowercase;
     font-style: italic;
     font-size: 1.1rem;
+  }
+}
+
+@include mixins.responsivo(media) {
+
+  .ficha {
+    display: flex;
+    justify-content: space-between;
+    .campo {
+      padding-right: var(--espaco);
+      width: calc(100%/4);
+    }
+
+    .titulo,
+    .data {
+      max-width: div(200,16) + rem;
+    }
+
+    .capa {
+      padding-right: 0;
+      min-width: div(200,16) + rem;
+      max-width: div(300,16) + rem;
+      flex-grow: 1;
+    }
   }
 }

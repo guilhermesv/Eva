@@ -21,25 +21,35 @@
 
 	<!-- CSS customizado -->
 	<style>
-		:root {
-			--cor-conteudo-texto: <?php the_field('cor-conteudo-texto'); ?>;
-			--cor-conteudo-fundo: <?php the_field('cor-conteudo-fundo'); ?>;
-			--cor-estrutural-texto: <?php the_field('cor-estrutural-texto'); ?>;
-			--cor-estrutural-fundo: <?php the_field('cor-estrutural-fundo'); ?>;
-		}
 
-		body {
+		<?php if( is_archive() ): ?>
+			:root {
+				--cor-conteudo-texto: #ffffff; ?>;
+				--cor-conteudo-fundo: #f4865a; ?>;
+			}
 
-			<?php if(get_field('conteudo-fundo-imagem')) : 
-				$imagem = get_field('conteudo-fundo-imagem');
-				echo 'background-image: url("' . $imagem . '");';
-			endif;?>
+		<?php else: ?>
+			:root {
+				--cor-conteudo-texto: <?php the_field('cor-conteudo-texto'); ?>;
+				--cor-conteudo-fundo: <?php the_field('cor-conteudo-fundo'); ?>;
+				--cor-estrutural-texto: <?php the_field('cor-estrutural-texto'); ?>;
+				--cor-estrutural-fundo: <?php the_field('cor-estrutural-fundo'); ?>;
+			}
 
-			<?php if(get_field('conteudo-fundo-imagem-capa')) : 
-				$imagem = get_field('conteudo-fundo-imagem-capa');
-				echo 'background-size: cover;';
-			endif;?>
-		}
+			body {
+
+				<?php if(get_field('conteudo-fundo-imagem')) : 
+					$imagem = get_field('conteudo-fundo-imagem');
+					echo 'background-image: url("' . $imagem . '");';
+				endif;?>
+
+				<?php if(get_field('conteudo-fundo-imagem-capa')) : 
+					$imagem = get_field('conteudo-fundo-imagem-capa');
+					echo 'background-size: cover;';
+				endif;?>
+			}
+
+			<?php endif ?>
 	</style>
 </head>
 

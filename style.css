@@ -441,6 +441,9 @@ a:visited {
   font-family: var(--fonte-enfase);
 }
 
+.ficha {
+  margin-bottom: var(--espaco-md);
+}
 .ficha .campo {
   margin-bottom: var(--espaco);
 }
@@ -449,6 +452,27 @@ a:visited {
   text-transform: lowercase;
   font-style: italic;
   font-size: 1.1rem;
+}
+
+@media (min-width: 50rem) {
+  .ficha {
+    display: flex;
+    justify-content: space-between;
+  }
+  .ficha .campo {
+    padding-right: var(--espaco);
+    width: calc(100%/4);
+  }
+  .ficha .titulo,
+.ficha .data {
+    max-width: 12.5rem;
+  }
+  .ficha .capa {
+    padding-right: 0;
+    min-width: 12.5rem;
+    max-width: 18.75rem;
+    flex-grow: 1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
