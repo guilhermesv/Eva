@@ -13,7 +13,6 @@ get_header();
 	<main id="primary" class="site-main">
 
 	<nav id="archive-navigation" class="archive-navigation">
-			<button class="menu-toggle" aria-controls="arquivo-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'eva' ); ?></button>
 			<?php
 			wp_nav_menu(
 				array(

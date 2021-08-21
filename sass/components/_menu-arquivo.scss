@@ -1,0 +1,36 @@
+@use '../abstracts/mixins';
+
+.archive-navigation {
+	ul {
+		display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+		list-style: none;
+		margin: 0 0 var(--espaco);
+		padding: 0;
+    font-size: var(--fonte-tamanho-gd);
+
+    li {
+      margin: 0 var(--espaco);
+    }
+
+    li:last-child {
+      margin-right: 0;
+    }
+
+  }
+
+	a {
+		display: block;
+		text-decoration: none;
+	}
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+
+@include mixins.responsivo(pequena) {
+
+}

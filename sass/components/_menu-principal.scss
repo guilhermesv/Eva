@@ -63,9 +63,6 @@
 	}
 }
 
-
-
-
 @include mixins.responsivo(pequena) {
   .menu-toggle {
 		display: none;

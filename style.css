@@ -15,6 +15,8 @@
 :root {
   --fonte-base: "Apfel Grotezk";
   --fonte-enfase: "Mazius";
+  --fonte-tamanho-base: 1.2rem;
+  --fonte-tamanho-gd: 1.5rem;
 }
 
 /*!
@@ -132,6 +134,7 @@ select {
 }
 body {
   font-family: var(--fonte-base);
+  font-size: var(--fonte-tamanho-base);
   background-color: var(--cor-conteudo-fundo);
   color: var(--cor-conteudo-texto);
 }
@@ -365,6 +368,29 @@ a:visited {
     display: flex;
   }
 }
+.archive-navigation ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  margin: 0 0 var(--espaco);
+  padding: 0;
+  font-size: var(--fonte-tamanho-gd);
+}
+.archive-navigation ul li {
+  margin: 0 var(--espaco);
+}
+.archive-navigation ul li:last-child {
+  margin-right: 0;
+}
+.archive-navigation a {
+  display: block;
+  text-decoration: none;
+}
+.archive-navigation a:hover {
+  text-decoration: underline;
+}
+
 .no-ar {
   font-family: var(--fonte-enfase);
   text-align: right;
