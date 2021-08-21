@@ -51,6 +51,7 @@ if ( ! function_exists( 'eva_setup' ) ) :
 		register_nav_menus(
 			array(
 				'menu-1' => esc_html__( 'Primary', 'eva' ),
+				'menu-2' => esc_html__( 'Arquivo', 'eva' ),
 			)
 		);
 

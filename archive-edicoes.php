@@ -12,13 +12,19 @@ get_header();
 
 	<main id="primary" class="site-main">
 
-		<?php if ( have_posts() ) : ?>
+	<nav id="archive-navigation" class="archive-navigation">
+			<button class="menu-toggle" aria-controls="arquivo-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'eva' ); ?></button>
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'menu-2',
+					'menu_id'        => 'arquivo-menu',
+				)
+			);
+			?>
+		</nav><!-- #site-navigation -->
 
-			<header class="page-header">
-				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				?>
-			</header><!-- .page-header -->
+		<?php if ( have_posts() ) : ?>
 
       <div class="fichas-lista">
 			<?php
