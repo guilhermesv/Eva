@@ -20,10 +20,10 @@
   </div>
   <div class="campo resumo">
     <div class="campo-rotulo">
-        <?php echo esc_html__( 'Resumo', 'eva' ) ?>
+      <?php echo esc_html__( 'Resumo', 'eva' ) ?>
     </div>
     <div class="campo-conteudo">
-        <?php eva_resumo(); ?>
+      <?php eva_resumo(); ?>
     </div>
   </div>
   <div class="campo catalogacao">
@@ -43,6 +43,11 @@
     </div>
   </div>
   <div class="campo capa">
-    <?php the_post_thumbnail(); ?>
+    <div class="campo-rotulo">
+      <?php echo esc_html__( 'Capa', 'eva' ) ?>
+    </div>
+    <div class="campo-conteudo">
+      <?php the_post_thumbnail(); ?>
+    </div>
   </div>
 </article><!-- #post-<?php the_ID(); ?> -->
